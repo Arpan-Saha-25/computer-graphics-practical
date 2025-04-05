@@ -17,7 +17,8 @@ void BLA(int x1, int y_1, int x2, int y2) {
     int p = 2 * dy - dx;
 
     while (x <= x2) {
-        printf("(%d, %d) \n", x, y);
+        printf("(%d, %d)        p = %4d\n", x, y, p);
+
         glVertex2i(x, y);
         x++;
         if (p < 0) {

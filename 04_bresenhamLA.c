@@ -8,7 +8,7 @@ int x1, y_1, x2, y2;
 void BLA(int x1, int y_1, int x2, int y2) {
     int del_x = abs(x2 - x1);
     int del_y = abs(y2 - y_1);
-    int sx = (x2 > x1) ? 1 : -1;  // 1 to increase | -1 to decrease
+    int sx = (x2 > x1) ? 1 : -1;
     int sy = (y2 > y_1) ? 1 : -1;
 
     glBegin(GL_POINTS);
@@ -34,8 +34,7 @@ void BLA(int x1, int y_1, int x2, int y2) {
         int p = 2 * del_y - del_x;
         int newX = x1, newY = y_1;
 
-        while (newX != x2 + sx)  // Fixes infinite loop issue
-        {
+        while (newX != x2 + sx) {
             glVertex2i(newX, newY);
             printf("Plotting: (%d, %d)\n", newX, newY);
 
