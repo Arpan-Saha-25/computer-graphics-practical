@@ -21,6 +21,8 @@ void drawSymmetricPoints(int x, int y) {
 void midpointEllipse() {
     float rx2 = rx * rx;
     float ry2 = ry * ry;
+
+    // STARTING POINT
     float x = 0;
     float y = ry;
 
@@ -61,10 +63,22 @@ void midpointEllipse() {
 
 void display() {
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1.0, 1.0, 0.0);  // Yellow
+    glColor3f(1.0, 1.0, 0.0);  // Yellow for ellipse
     glPointSize(2.0);
 
     midpointEllipse();
+
+    // Draw X and Y axes
+    glColor3f(1.0, 1.0, 1.0);  // White color for axes
+    glBegin(GL_LINES);
+    // X-axis
+    glVertex2i(-500, 0);
+    glVertex2i(500, 0);
+
+    // Y-axis
+    glVertex2i(0, -500);
+    glVertex2i(0, 500);
+    glEnd();
 
     glFlush();
 }

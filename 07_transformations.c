@@ -133,7 +133,7 @@ void display() {
 void init() {
     glClearColor(1.0, 1.0, 1.0, 1.0);  // white background
     glColor3f(0.0, 0.0, 0.0);          // black drawing color
-    gluOrtho2D(0, 400, 0, 400);        // set coordinate system
+    gluOrtho2D(-400, 400, -400, 400);  // centered coordinate system
 }
 
 int main(int argc, char** argv) {
@@ -159,5 +159,5 @@ int main(int argc, char** argv) {
 
 /*
 to run :
-gcc 07_translation.c -lGL -lGLU -lglut -lm && ./a.out
+gcc 07_transformations.c -lGL -lGLU -lglut -lm && ./a.out
 */
