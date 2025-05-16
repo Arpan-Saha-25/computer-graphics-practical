@@ -3,7 +3,6 @@ Implement DDA algorithm : Digital Differential Analyse
 */
 #include <GL/glu.h>
 #include <GL/glut.h>
-#include <fenv.h>
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
