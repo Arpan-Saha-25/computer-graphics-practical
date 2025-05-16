@@ -30,7 +30,7 @@ void midpointCircle() {
     drawCirclePoints(x, y);
 
     while (x < y) {
-        printf("value of (x,y) : ", x, y);
+        printf("\nvalue of (x,y) : %d %d", x, y);
         x++;
         if (p < 0) {
             p = p + 2 * x + 1;  // No change in y
