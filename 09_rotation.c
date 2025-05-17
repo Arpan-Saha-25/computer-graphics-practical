@@ -11,6 +11,7 @@ typedef struct {
 } coord;
 
 int verts;
+coord pivotPt;
 coord origPts[100];    // original coordinates
 coord rotatePts[100];  // rotated coordinates
 
@@ -33,11 +34,11 @@ void display() {
     glVertex2f(0, 800);
     glEnd();
 
-    // glColor3f(0, 0, 0);  // black dot
-    // glPointSize(5.0);
-    // glBegin(GL_POINTS);
-    // glVertex2f(pivotPt.x, pivotPt.y);
-    // glEnd();
+    glColor3f(0, 0, 0);  // black dot
+    glPointSize(5.0);
+    glBegin(GL_POINTS);
+    glVertex2f(pivotPt.x, pivotPt.y);
+    glEnd();
 
     glColor3f(0, 0.5, 0);  // green for original polygon
     glBegin(GL_LINE_LOOP);
@@ -58,7 +59,6 @@ void display() {
 
 void rotation2D() {
     int theta;
-    coord pivotPt;
 
     printf("Enter the number of vertices: ");
     scanf("%d", &verts);
