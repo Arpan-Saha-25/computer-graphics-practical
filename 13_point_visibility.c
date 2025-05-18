@@ -10,7 +10,7 @@ typedef struct {
 Point a, b;  // Line endpoints
 
 // Window bounds
-float xL = -100, xR = 100, yB = -100, yT = 100;
+float xL = -200, xR = 200, yB = -200, yT = 200;
 
 enum Visibility { INVISIBLE,
                   PARTIAL,
@@ -24,7 +24,7 @@ void init() {
 }
 
 void drawClippingWindow() {
-    glColor3f(0, 0, 1);
+    glColor3f(1, 0, 1);
     glBegin(GL_LINE_LOOP);
     glVertex2f(xL, yB);
     glVertex2f(xR, yB);
